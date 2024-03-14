@@ -6,9 +6,9 @@
   --header-height: 3rem;
 
   /*========== Colors ==========*/
-  --first-color: #da2535;
+  --first-color: #1d396c;
   --first-color-alt: #c42130;
-  --first-color-send: #de3b49;
+  --first-color-send: #ededed;
   --title-color: #161212;
   --text-color: #5b5757;
   --text-color-light: #8f8a8a;
@@ -194,7 +194,7 @@ img {
 }
 .img_logo {
   padding: auto;
-  width: 70px;
+  width: 15%;
 
   object-fit: cover;
 }
