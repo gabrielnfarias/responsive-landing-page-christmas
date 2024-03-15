@@ -3,31 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!--========== BOX ICONS ==========-->
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
-
     <!--========== CSS ==========-->
     <link rel="stylesheet" href="assets/css/styles.css" />
-
-    <title>MCMV Assessoria</title>
+    <title>LF Consultoria</title>
   </head>
   <body>
     <!--========== SCROLL TOP ==========-->
     <a href="#" class="scrolltop" id="scroll-top">
       <i class="bx bx-up-arrow-alt scrolltop__icon"></i>
     </a>
-
     <!--========== HEADER ==========-->
     <header class="l-header" id="header">
       <nav class="nav bd-container">
         <img class="img_logo" src="/assets/img/logo preview.png" alt="">
-      
         <div class="nav__menu" id="nav-menu">
-            
           <ul class="nav__list">
             <li class="nav__item">
               <a href="#home" class="nav__link active-link">Home</a>
@@ -41,46 +35,40 @@
               <a href="#decoration" class="nav__link">Beneficios    </a>
             </li>
             <li class="nav__item">
-              <a href="#accessory" class="nav__link">Sobre nós</a>
+              <a href="https://www.lyx.com.br/minha-casa-minha-vida/" target="_blank" class="nav__link">Sobre nossa parceria</a>
             </li>
-
             <li>
               <i class="bx bx-toggle-left change-theme" id="theme-button"></i>
             </li>
           </ul>
         </div>
-
         <div class="nav__toggle" id="nav-toggle">
           <i class="bx bx-grid-alt"></i>
         </div>
       </nav>
     </header>
-
     <main class="l-main">
       <!--========== HOME ==========-->
       <section class="home" id="home">
         <div class="home__container ">
             <img class="home__img " src="assets/img/back.png" alt="" />
       </section>
-
       <!--========== SHARE ==========-->
       <section class="share section bd-container" id="share">
         <div class="share__container bd-grid">
-          
             <div class="share__img">
               <img src="assets/img/9b89a92c-91cc-4eef-814f-11a28d2995db-removebg-preview7768.png" alt="" />
             </div>
             <h2 class="section-title-center">
-           Sobre o Programa Minha Casa Minha Vida
+          Sobre o Programa Minha Casa Minha Vida
             </h2>
-            <h4> A MCMV Consultoria está aqui para te ajudar!</h4>
+            <h4> A LF Consultoria está aqui para te ajudar!</h4>
             <p class="share__description">
 O Programa do Governo Federal oferece financiamento atrativo para famílias de baixa renda adquirirem moradias. Em parceria com diversos setores, incluindo estados, municípios e entidades sem fins lucrativos, o programa tem beneficiado milhares de famílias brasileiras, proporcionando a oportunidade de terem suas próprias casas. Os imóveis podem ser adquiridos apenas na região de Porto Alegre e sua área metropolitana. 
             </p>
           
         </div>
       </section>
-
       <!--========== DECORATION ==========-->
       <section class="decoration section bd-container" id="decoration">
         <h2 class="section-title">
@@ -96,7 +84,6 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
             <h3 class="decoration__title">Entrada </h3>
             <a href="#" class="button button-link">Use seu FGTS e parcele sua entrada</a>
           </div>
-
           <div class="decoration__data">
             <img
               src="assets/img/beneficio.png"
@@ -106,7 +93,6 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
             <h3 class="decoration__title">Beneficio</h3>
             <a href="#" class="button button-link">Até R$ 55 Mil pela Caixa</a>
           </div>
-
           <div class="decoration__data">
             <img
               src="assets/img/juros.png"
@@ -120,72 +106,54 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
           </div>
         </div>
       </section>
-
-     
-
       <!--========== SEND GIFT ==========-->
       <section class="send section">
-        <div class="send__container bd-container ">
-          <div class="send__content">
+        <div class="container">
+          <div class="form-image">
+            <img src="assets/img/WhatsApp Image 2024-03-14 at 22.04.50.jpeg" alt="">
+        </div>
+          <div class="send__content  " >
             <h2 class="section-title-center send__title">A Hora é agora</h2>
             <p class="send__description">
-             Até quando vai deixar a oportunidade passar ?
+                Até quando vai deixar a oportunidade passar ?
             </p>
-            <form>
-                <div class="send__direction">
-                    <input
-                      type="text"
-                      placeholder="Nome e Sobrenome"
-                      class="send__input"
-                    />
-                </div>
-            
-                <div class="space"></div> <!-- Espaço vazio -->
-            
-                <div class="send__direction">
-                    <input
-                      type="number"
-                      placeholder="Insira seu cpf"
-                      class="send__input"
-                    />
-                </div>
-            
-                <div class="space"></div> <!-- Espaço vazio -->
-            
-                <div class="send__direction">
-                    <input
-                      type="number"
-                      placeholder="Renda familiar"
-                      class="send__input"
-                    />
-                </div>
-            
-                <div class="space"></div> <!-- Espaço vazio -->
-            
-                <div class="send__direction">
-                    <input
-                      type="text"
-                      placeholder="Região de interesse "
-                      class="send__input"
-                    />
-                </div>
-                
-                <div class="space"></div> <!-- Espaço vazio -->
-            
-                <div class="send__direction">
-                    <input
-                      type="email"
-                      placeholder="Email"
-                      class="send__input"
-                    />
-                </div>
-            </form>
+                      <form action="#">
+                          <div class="form-header">
+                          </div>
+                          <div class="input-group">
+                              <div class="input-box">
+                                  <label for="firstname">Nome Completo</label>
+                                  <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required>
+                              </div>
+                              <div class="input-box">
+                                  <label for="email">E-mail</label>
+                                  <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                              </div>
+                              <div class="input-box">
+                                <label for="number">Celular</label>
+                                <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
+                            </div>
+                              <div class="input-box">
+                                <label for="number">CPF</label>
+                                <input id="number" type="tel" name="number" placeholder="xxx.xxx.xxx-xx" required>
+                            </div>
+                            <div class="input-box">
+                              <label for="number">Região de interesse</label>
+                              <input id="text" type="text" name="number" placeholder="Apenas Porto Alegre e região metropolitana." required>
+                          </div>
+                              
+                          </div>
+                          <div class="continue-button">
+                              <button><a href="#">Continuar</a> </button>
+                          </div>
+                      </form>       
+          </body>
+          </form>
             
           </div>
         </div>
       </section>
     </main>
-
     <!--========== FOOTER ==========-->
     <footer class="footer section">
       <div class="footer__container bd-container bd-grid">
@@ -198,7 +166,6 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
             happiness
           </p>
         </div>
-
         <div class="footer__content">
           <h3 class="footer__title">Our Services</h3>
           <ul>
@@ -207,7 +174,6 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
             <li><a href="#" class="footer__link">Shipping mode</a></li>
           </ul>
         </div>
-
         <div class="footer__content">
           <h3 class="footer__title">Our Company</h3>
           <ul>
@@ -216,7 +182,6 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
             <li><a href="#" class="footer__link">Our mision</a></li>
           </ul>
         </div>
-
         <div class="footer__content">
           <h3 class="footer__title">Social</h3>
           <a href="#" class="footer__social"
@@ -228,13 +193,10 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
           ></a>
         </div>
       </div>
-
       <p class="footer__copy">&#169; 2021 Bedimcode. All right reserved</p>
     </footer>
-
     <!--========== SCROLL REVEAL ==========-->
     <script src="https://unpkg.com/scrollreveal"></script>
-
     <!--========== MAIN JS ==========-->
     <script src="assets/js/main.js"></script>
   </body>
