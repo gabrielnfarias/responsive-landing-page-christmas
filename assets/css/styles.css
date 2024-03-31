@@ -663,7 +663,7 @@ img {
 
 .input-box {
   display: flex;
-  width: 50vh;
+  width: 100%;
   flex-direction: column; /* Para alinhar as labels e inputs em coluna */
 }
 
