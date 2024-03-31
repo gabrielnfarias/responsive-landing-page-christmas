@@ -112,36 +112,36 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
             <img src="assets/img/WhatsApp Image 2024-03-14 at 22.04.50.jpeg" alt="">
         </div>
           <div class="send__content  " >
-                      <form action="#">
-                          <div class="form-header">
-                          </div>
-                          <div class="input-group">
-                              <div class="input-box">
-                                  <label for="firstname">Nome Completo</label>
-                                  <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required>
-                              </div>
-                              <div class="input-box">
-                                  <label for="email">E-mail</label>
-                                  <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
-                              </div>
-                              <div class="input-box">
-                                <label for="number">Celular</label>
-                                <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
-                            </div>
-                              <div class="input-box">
-                                <label for="number">CPF</label>
-                                <input id="number" type="tel" name="number" placeholder="xxx.xxx.xxx-xx" required>
-                            </div>
-                            <div class="input-box">
-                              <label for="number">Região de interesse</label>
-                              <input id="text" type="text" name="number" placeholder="Apenas Porto Alegre e região metropolitana." required>
-                          </div>
-                              
-                          </div>
-                          <div class="continue-button">
-                              <button><a href="#">Enviar</a> </button>
-                          </div>
-                      </form>       
+            <form action="/submit" method="POST">
+              <div class="form-header">
+              </div>
+              <div class="input-group">
+                  <div class="input-box">
+                      <label for="firstname">Nome Completo</label>
+                      <input id="firstname" type="text" name="nomeCompleto" placeholder="Digite seu primeiro nome" required>
+                  </div>
+                  <div class="input-box">
+                      <label for="email">E-mail</label>
+                      <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                  </div>
+                  <div class="input-box">
+                      <label for="number">Celular</label>
+                      <input id="number" type="tel" name="celular" placeholder="(xx) xxxx-xxxx" required>
+                  </div>
+                  <div class="input-box">
+                      <label for="cpf">CPF</label>
+                      <input id="cpf" type="tel" name="cpf" placeholder="xxx.xxx.xxx-xx" required>
+                  </div>
+                  <div class="input-box">
+                      <label for="regiao">Região de Interesse</label>
+                      <input id="regiao" type="text" name="regiao" placeholder="Apenas Porto Alegre e região metropolitana." required>
+                  </div>
+              </div>
+              <div class="continue-button">
+                  <button type="submit">Enviar</button>
+              </div>
+          </form>
+             
           </body>
           </form>
             
@@ -153,20 +153,14 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
     <footer class="footer section">
       <div class="footer__container bd-container bd-grid">
         <div class="footer__content">
-          <h3 class="footer__title">
-            <a href="#" class="footer__logo">Christmas Gift</a>
-          </h3>
-          <p class="footer__description">
-            I sent a gift and it gives <br />
-            happiness
-          </p>
-        </div>
-        <div class="footer__content">
           <h3 class="footer__title">Our Services</h3>
           <ul>
-            <li><a href="#" class="footer__link">Pricing </a></li>
-            <li><a href="#" class="footer__link">Discounts</a></li>
-            <li><a href="#" class="footer__link">Shipping mode</a></li>
+            <li class="line-up">
+              <img class="img-side-icon" src="./assets/img/whatsapp-removebg-preview.png" alt="">
+              <a href="https://wa.me/5551993608645" class="footer__link" target="_blank">(51) 99360-8645</a>
+          </li>
+          <li class="line-up"><img class="img-side-icon" src="./assets//img/email.png" alt=""><a href="#" class="footer__link">email@gmail.com</a></li>
+            <li class="line-up"><img class="img-side-icon" src="./assets//img/location.png" alt=""><a href="https://www.google.com/maps/place/Av.+da+Cavalhada,+3884+-+Cavalhada,+Porto+Alegre+-+RS,+91740-000/@-30.1098037,-51.2315136,17z/data=!3m1!4b1!4m6!3m5!1s0x95198250b1609d27:0x9bf83048f2b65fc5!8m2!3d-30.1098038!4d-51.2266427!16s%2Fg%2F11c2hzqtsv?entry=ttu " class="footer__link">Av da Cavalhada 3884</a></li>
           </ul>
         </div>
         <div class="footer__content">
@@ -182,7 +176,6 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
           <a href="#" class="footer__social"
             ><i class="bx bxl-facebook-circle"></i
           ></a>
-          <a href="#" class="footer__social"><i class="bx bxl-twitter"></i></a>
           <a href="#" class="footer__social"
             ><i class="bx bxl-instagram-alt"></i
           ></a>
