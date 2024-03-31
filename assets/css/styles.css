@@ -663,7 +663,7 @@ img {
 
 .input-box {
   display: flex;
-  width: 100%;
+  width: 50vh;
   flex-direction: column; /* Para alinhar as labels e inputs em coluna */
 }
 
@@ -817,8 +817,11 @@ h1 {
 
 @media screen and (max-width: 1064px) {
   .container {
-    width: 90%;
+    width: auto;
     height: auto;
+  }
+  .continue-button {
+    width: auto;
   }
   .input-group {
     flex-direction: column;
