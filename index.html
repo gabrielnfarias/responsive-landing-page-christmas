@@ -111,38 +111,61 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
             <p>Até quando irá deixar as oportunidades passarem?</p>
             <img src="assets/img/WhatsApp Image 2024-03-14 at 22.04.50.jpeg" alt="">
         </div>
-          <div class="send__content  " >
-            <form action="/submit" method="POST">
-              <div class="form-header">
-              </div>
+          <div class="send__content" >
+            <form id="myForm">
+              <div class="form-header"></div>
               <div class="input-group">
-                  <div class="input-box">
-                      <label for="firstname">Nome Completo</label>
-                      <input id="firstname" type="text" name="nomeCompleto" placeholder="Digite seu primeiro nome" required>
-                  </div>
-                  <div class="input-box">
-                      <label for="email">E-mail</label>
-                      <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
-                  </div>
-                  <div class="input-box">
-                      <label for="number">Celular</label>
-                      <input id="number" type="tel" name="celular" placeholder="(xx) xxxx-xxxx" required>
-                  </div>
-                  <div class="input-box">
-                      <label for="cpf">CPF</label>
-                      <input id="cpf" type="tel" name="cpf" placeholder="xxx.xxx.xxx-xx" required>
-                  </div>
-                  <div class="input-box">
-                      <label for="regiao">Região de Interesse</label>
-                      <input id="regiao" type="text" name="regiao" placeholder="Apenas Porto Alegre e região metropolitana." required>
-                  </div>
+                <div class="input-box">
+                  <label for="firstname">Nome Completo</label>
+                  <input id="firstname" type="text" name="nomeCompleto" placeholder="Digite seu primeiro nome" required>
+                </div>
+                <div class="input-box">
+                  <label for="email">E-mail</label>
+                  <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="input-box">
+                  <label for="number">Celular</label>
+                  <input id="number" type="tel" name="celular" placeholder="(xx) xxxx-xxxx" required>
+                </div>
+                <div class="input-box">
+                  <label for="cpf">CPF</label>
+                  <input id="cpf" type="tel" name="cpf" placeholder="xxx.xxx.xxx-xx" required>
+                </div>
+                <div class="input-box">
+                  <label for="regiao">Região de Interesse</label>
+                  <input id="regiao" type="text" name="regiao" placeholder="Apenas Porto Alegre e região metropolitana." required>
+                </div>
               </div>
               <div class="continue-button">
-                  <button type="submit">Enviar</button>
+                <button type="submit">Enviar</button>
               </div>
-          </form>
-          </body>
-          </form>
+            </form>
+          
+            <script>
+              const form = document.getElementById('myForm');
+            
+              form.addEventListener('submit', async (event) => {
+                event.preventDefault(); 
+            
+                const formData = new FormData(form);
+            
+                try {
+                  const response = await fetch('http://localhost:3000/submit', {
+                    method: 'POST',
+                    body: formData
+                  });
+            
+                  if (response.ok) {
+                    const data = await response.json();
+                    console.log('Dados enviados com sucesso:', data);
+                   
+                    console.error('Ocorreu um erro ao enviar os dados:', response.status);
+                  }
+                } catch (error) {
+                  console.error('Ocorreu um erro ao enviar os dados:', error);
+                }
+              });
+            </script>
             
           </div>
         </div>
