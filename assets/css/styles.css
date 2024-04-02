@@ -668,25 +668,18 @@ img {
   }
 }
 
-@media screen and (max-width: 968px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 .container {
   display: flex;
-  flex-direction: row; /* Alteração para alinhar em coluna */
-  align-items: center; /* Para centralizar os elementos na coluna */
+  flex-direction: row;
+  align-items: center;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  width: 100%; /* Largura ajustável conforme necessário */
-  margin: 0 auto; /* Centralizar o formulário na página */
-  padding: 20px; /* Espaçamento interno do formulário */
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .input-group {
@@ -799,7 +792,7 @@ h1 {
   border-radius: 10px;
   box-shadow: 1px 1px 6px #0000001c;
   font-size: 0.8rem;
-  width: 70%;
+  width: 80%;
 }
 
 .input-box input:hover {
@@ -842,43 +835,20 @@ h1 {
   color: #fff;
 }
 
-@media screen and (max-width: 1330px) {
+@media screen and (max-width: 968px) {
   .container {
-    width: 50%;
-  }
-  .form {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 1064px) {
-  .container {
-    width: 100vh;
-    height: auto;
-  }
-
-  .send__content {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: -100px;
-    padding-top: 100px;
   }
-
-  @media (max-width: 768px) {
-    .send__content {
-      margin-top: 0;
-      padding-top: 0;
-    }
+  .input-box input {
+    width: 60%;
   }
-  .input-group {
-    display: flex;
-    flex-direction: column;
-    z-index: 5;
-    padding-right: 5rem;
-    max-height: 10rem;
-    overflow-y: scroll;
-    flex-wrap: nowrap;
+  .continue-button button {
+    width: 60%;
+  }
+  .show-scroll {
+    display: none;
+  }
+  .footer__social {
+    display: inline;
   }
 }
