@@ -97,6 +97,10 @@ p {
 .obs {
   width: 30px;
 }
+.title-exito {
+  color: #ffb91b;
+  padding-bottom: 1.5rem;
+}
 h1,
 h2,
 h3 {
@@ -188,7 +192,7 @@ img {
 }
 .img_logo {
   padding: auto;
-  width: 15%;
+  width: 10%;
 
   object-fit: cover;
 }
@@ -238,12 +242,8 @@ img {
 }
 
 /* Change background header */
-.scroll-header {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Scroll top */
-.scrolltop {
+.talk-icon {
+  width: 270px;
   position: fixed;
   right: 1rem;
   bottom: -20%;
@@ -251,15 +251,28 @@ img {
   justify-content: center;
   align-items: center;
   padding: 0.3rem;
-  background: rgba(218, 37, 53, 0.5);
+  border-radius: 0.4rem;
+  z-index: var(--z-tooltip);
+}
+
+.scroll-header {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Scroll top */
+
+.scrolltop {
+  width: 270px;
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
   border-radius: 0.4rem;
   z-index: var(--z-tooltip);
   transition: 0.4s;
-  visibility: hidden;
-}
-
-.scrolltop:hover {
-  background-color: var(--first-color);
 }
 
 .scrolltop__icon {
@@ -269,7 +282,7 @@ img {
 
 .show-scroll {
   visibility: visible;
-  bottom: 1.5rem;
+  bottom: 0rem;
 }
 
 /*========== HOME ==========*/
@@ -494,6 +507,7 @@ img {
 }
 
 .footer__social {
+  display: ruby;
   font-size: 1.5rem;
   color: var(--title-color);
   margin-right: var(--mb-3);
@@ -677,23 +691,24 @@ img {
 
 .input-group {
   display: flex;
-  flex-direction: column; /* Para alinhar os inputs em coluna */
-  gap: 10px; /* Espaçamento vertical entre os inputs */
+  flex-direction: column;
+  gap: 10px;
 }
 
 .input-box {
   display: flex;
-  width: 50vh;
-  flex-direction: column; /* Para alinhar as labels e inputs em coluna */
+  width: 150%;
+  flex-direction: column;
 }
 
 .continue-button {
-  margin-top: 20px; /* Espaçamento entre o último input e o botão */
+  margin-top: 20px;
+  width: 150%;
 }
 
 .continue-button button {
   color: white;
-  padding: 10px 20px; /* Espaçamento interno do botão */
+  padding: 10px 20px;
 }
 
 .form-image {
@@ -708,7 +723,7 @@ img {
 .form-image img {
   width: 31rem;
   border-radius: 5px;
-  box-shadow: black;
+  box-shadow: 0 2px 6px rgb(10 10 10 / 74%);
 }
 
 .form {
@@ -842,6 +857,21 @@ h1 {
     height: auto;
   }
 
+  .send__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -100px;
+    padding-top: 100px;
+  }
+
+  @media (max-width: 768px) {
+    .send__content {
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
   .input-group {
     display: flex;
     flex-direction: column;
@@ -850,23 +880,5 @@ h1 {
     max-height: 10rem;
     overflow-y: scroll;
     flex-wrap: nowrap;
-  }
-}
-
-@media screen and (max-width: 741px) {
-  .container {
-    height: 100vh; /* Set container height to 100% viewport height */
-    display: flex; /* Allow stacking of elements */
-    flex-direction: column; /* Stack elements vertically */
-  }
-
-  .form-image {
-    flex: 0 0 auto; /* Set image to fixed height and allow content to overflow */
-    overflow-y: auto; /* Enable vertical scrolling within the image container */
-  }
-
-  .send__content {
-    flex: 1 1 auto; /* Allow form to fill remaining space and scroll if needed */
-    padding: 20px; /* Add padding for better visual separation */
   }
 }

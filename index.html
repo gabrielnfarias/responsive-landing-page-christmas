@@ -10,17 +10,17 @@
     />
     <!--========== CSS ==========-->
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <title>LF Consultoria</title>
+    <title>Êxito imobiliária e empreendimentos</title>
   </head>
   <body>
     <!--========== SCROLL TOP ==========-->
-    <a href="#" class="scrolltop" id="scroll-top">
-      <i class="bx bx-up-arrow-alt scrolltop__icon"></i>
+    <a href="https://wa.me/5551993608645" target="_blank" class="scrolltop show-scroll" id="scroll-top" >
+      <img src="./assets/img/fale conosco icon.png" alt="">
     </a>
     <!--========== HEADER ==========-->
-    <header class="l-header" id="header">
+    <header class="l-header scroll-header" id="header">
       <nav class="nav bd-container">
-        <img class="img_logo" src="/assets/img/logo preview.png" alt="">
+        <img class="img_logo" src="./assets/img/icon-exito.png" alt="Icon-logo">
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
@@ -35,7 +35,7 @@
               <a href="#decoration" class="nav__link">Beneficios    </a>
             </li>
             <li class="nav__item">
-              <a href="https://www.lyx.com.br/minha-casa-minha-vida/" target="_blank" class="nav__link">Sobre nossa parceria</a>
+              <a href="https://hrrimoveis.com.br" target="_blank" class="nav__link">Sobre nossa parceria</a>
             </li>
           </ul>
         </div>
@@ -59,11 +59,10 @@
             <h2 class="section-title-center">
           Sobre o Programa Minha Casa Minha Vida
             </h2>
-            <h4> A LF Consultoria está aqui para te ajudar!</h4>
+            <h4> A Êxito imobiliária e empreendimentos está aqui para te ajudar!</h4>
             <p class="share__description">
 O Programa do Governo Federal oferece financiamento atrativo para famílias de baixa renda adquirirem moradias. Em parceria com diversos setores, incluindo estados, municípios e entidades sem fins lucrativos, o programa tem beneficiado milhares de famílias brasileiras, proporcionando a oportunidade de terem suas próprias casas. Os imóveis podem ser adquiridos apenas na região de Porto Alegre e sua área metropolitana. 
             </p>
-          
         </div>
       </section>
       <!--========== DECORATION ==========-->
@@ -111,11 +110,12 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
             <p>Até quando irá deixar as oportunidades passarem?</p>
             <img src="assets/img/WhatsApp Image 2024-03-14 at 22.04.50.jpeg" alt="">
           </div>
-        
           <div class="send__content">
             <form id="myForm">
               <div class="form-header"></div>
-        
+              <h3 class="title-exito">Faça uma Simulaçãoagora mesmo <br>
+                com um de nossos consultores!
+              </h3>
               <div class="input-group">
                 <div class="input-box">
                   <label for="firstname">Nome Completo</label>
@@ -142,15 +142,11 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
                 <button type="submit">Enviar</button>
               </div>
             </form>
-          </div>
-        </div>
-          
             <script>
               const form = document.getElementById('myForm');
-            
-              form.addEventListener('submit', async (event) => {
-                event.preventDefault(); 
 
+              form.addEventListener('submit', async ( event) => {
+                event.preventDefault(); 
                 const nome = document.getElementById('firstname');
                 const email = document.getElementById('email');
                 const celular= document.getElementById('celular');
@@ -164,23 +160,36 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
                     'Content-Type': 'application/json'
                   },
                     body:  JSON.stringify( {
- email: email.value,
- nome: nome.value,
- celular: celular.value,
- cpf: cpf.value,
- regiao: regiao.value
-})
+                      email: email.value,
+                      nome: nome.value,
+                      celular: celular.value,
+                      cpf: cpf.value,
+                      regiao: regiao.value
+                    })
                   });
+                  
                   if (response.ok) {
-                    const data = await response.json();
-                    console.log('Dados enviados com sucesso:', data);
-                    console.error('Ocorreu um erro ao enviar os dados:', response.status);
-                  }
-                } catch (error) {
-                  console.error('Ocorreu um erro ao enviar os dados:', error);
-                }
+      const data = await response.json();
+
+      alert('Formulário preenchido com sucesso!');
+
+      form.reset();
+
+      const redirectTo = data.redirect || '/frontend'; 
+      window.location.href = redirectTo; 
+    } else {
+     
+      alert('Erro ao enviar o formulário. Tente novamente mais tarde.');
+    }
+  } catch (error) {
+    console.error('Erro ao enviar o formulário:', error);
+    alert('Erro inesperado. Tente novamente mais tarde.');
+  }
               });
             </script>
+          </div>
+        </div>
+      </section>
             
           </div>
         </div>
@@ -197,18 +206,17 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
               <a href="https://wa.me/5551993608645" class="footer__link" target="_blank">(51) 99360-8645</a>
           </li>
           <li class="line-up"><img class="img-side-icon" src="./assets//img/email.png" alt=""><a href="#" class="footer__link">email@gmail.com</a></li>
-            <li class="line-up"><img class="img-side-icon" src="./assets//img/location.png" alt=""><a href="https://www.google.com/maps/place/Av.+da+Cavalhada,+3884+-+Cavalhada,+Porto+Alegre+-+RS,+91740-000/@-30.1098037,-51.2315136,17z/data=!3m1!4b1!4m6!3m5!1s0x95198250b1609d27:0x9bf83048f2b65fc5!8m2!3d-30.1098038!4d-51.2266427!16s%2Fg%2F11c2hzqtsv?entry=ttu " class="footer__link">Av da Cavalhada 3884</a></li>
+            <li class="line-up"><img class="img-side-icon" src="./assets//img/location.png" alt=""><a href="https://www.google.com/maps/place/Av.+da+Cavalhada,+3884+-+Cavalhada,+Porto+Alegre+-+RS,+91740-000/@-30.1098037,-51.2315136,17z/data=!3m1!4b1!4m6!3m5!1s0x95198250b1609d27:0x9bf83048f2b65fc5!8m2!3d-30.1098038!4d-51.2266427!16s%2Fg%2F11c2hzqtsv?entry=ttu " class="footer__link">Nossa Localização</a></li>
           </ul>
         </div>
         <div class="footer__content">
           <h3 class="footer__title">Selos de Qualificação</h3>
           <ul>
-            <li><img class="footer_img" src="./assets/img/isopbqp.png" alt=""></li>
-          
+            <li>  ㅤ<img class="footer_img" src="./assets/img/isopbqp.png" alt=""></li>
           </ul>
         </div>
-        <div class="footer__content">
-          <h3 class="footer__title">Social</h3>
+        <div class="footer__social">
+          <h3 class="footer__title">Nossas Redes Sociais</h3>
           <a href="#" class="footer__social"
             ><i class="bx bxl-facebook-circle"></i
           ></a>
@@ -217,7 +225,8 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
           ></a>
         </div>
       </div>
-      <p class="footer__copy">&#169; 2024 Bedimcode. All right reserved</p>
+      <p class="footer__copy"> Êxito imobiliária e empreendimentos <br>
+        &#169; 2024 Bedimcode. All right reserved</p>
     </footer>
     <!--========== SCROLL REVEAL ==========-->
     <script src="https://unpkg.com/scrollreveal"></script>
