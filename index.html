@@ -110,10 +110,12 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
             <h2>A Hora é Agora!</h2>
             <p>Até quando irá deixar as oportunidades passarem?</p>
             <img src="assets/img/WhatsApp Image 2024-03-14 at 22.04.50.jpeg" alt="">
-        </div>
-          <div class="send__content" >
+          </div>
+        
+          <div class="send__content">
             <form id="myForm">
               <div class="form-header"></div>
+        
               <div class="input-group">
                 <div class="input-box">
                   <label for="firstname">Nome Completo</label>
@@ -140,34 +142,27 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
                 <button type="submit">Enviar</button>
               </div>
             </form>
+          </div>
+        </div>
           
             <script>
               const form = document.getElementById('myForm');
             
               form.addEventListener('submit', async (event) => {
                 event.preventDefault(); 
-            
-                
+
                 const nome = document.getElementById('firstname');
                 const email = document.getElementById('email');
                 const celular= document.getElementById('celular');
                 const cpf= document.getElementById('cpf');
                 const regiao= document.getElementById('regiao');
-
-              console.log ({
- email: email.value,
- nome: nome.value,
- celular: celular.value,
- cpf: cpf.value,
- regiao: regiao.value
-}
-) 
-
-
-
                 try {
                   const response = await fetch('http://localhost:3000/submit', {
                     method: 'POST',
+                    headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                  },
                     body:  JSON.stringify( {
  email: email.value,
  nome: nome.value,
@@ -175,9 +170,7 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
  cpf: cpf.value,
  regiao: regiao.value
 })
-
                   });
-            
                   if (response.ok) {
                     const data = await response.json();
                     console.log('Dados enviados com sucesso:', data);
@@ -197,7 +190,7 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
     <footer class="footer section">
       <div class="footer__container bd-container bd-grid">
         <div class="footer__content">
-          <h3 class="footer__title">Our Services</h3>
+          <h3 class="footer__title">Quero Saber mais!</h3>
           <ul>
             <li class="line-up">
               <img class="img-side-icon" src="./assets/img/whatsapp-removebg-preview.png" alt="">
@@ -208,11 +201,10 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
           </ul>
         </div>
         <div class="footer__content">
-          <h3 class="footer__title">Our Company</h3>
+          <h3 class="footer__title">Selos de Qualificação</h3>
           <ul>
-            <li><a href="#" class="footer__link">Blog</a></li>
-            <li><a href="#" class="footer__link">About us</a></li>
-            <li><a href="#" class="footer__link">Our mision</a></li>
+            <li><img class="footer_img" src="./assets/img/isopbqp.png" alt=""></li>
+          
           </ul>
         </div>
         <div class="footer__content">
