@@ -113,7 +113,7 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
           <div class="send__content">
             <form id="myForm">
               <div class="form-header"></div>
-              <h3 class="title-exito">Faça uma Simulaçãoagora mesmo <br>
+              <h3 class="title-exito">Faça uma Simulação agora mesmo <br>
                 com um de nossos consultores!
               </h3>
               <div class="input-group">
@@ -165,7 +165,8 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
                       celular: celular.value,
                       cpf: cpf.value,
                       regiao: regiao.value
-                    })
+                    }),
+                    mode : "no-cors"
                   });
                   
                   if (response.ok) {
