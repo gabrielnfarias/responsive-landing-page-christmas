@@ -125,7 +125,7 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
                 </div>
                 <div class="input-box">
                   <label for="number">Celular</label>
-                  <input id="number" type="tel" name="celular" placeholder="(xx) xxxx-xxxx" required>
+                  <input id="celular" type="tel" name="celular" placeholder="(xx) xxxx-xxxx" required>
                 </div>
                 <div class="input-box">
                   <label for="cpf">CPF</label>
@@ -147,18 +147,40 @@ O Programa do Governo Federal oferece financiamento atrativo para famílias de b
               form.addEventListener('submit', async (event) => {
                 event.preventDefault(); 
             
-                const formData = new FormData(form);
-            
+                
+                const nome = document.getElementById('firstname');
+                const email = document.getElementById('email');
+                const celular= document.getElementById('celular');
+                const cpf= document.getElementById('cpf');
+                const regiao= document.getElementById('regiao');
+
+              console.log ({
+ email: email.value,
+ nome: nome.value,
+ celular: celular.value,
+ cpf: cpf.value,
+ regiao: regiao.value
+}
+) 
+
+
+
                 try {
                   const response = await fetch('http://localhost:3000/submit', {
                     method: 'POST',
-                    body: formData
+                    body:  JSON.stringify( {
+ email: email.value,
+ nome: nome.value,
+ celular: celular.value,
+ cpf: cpf.value,
+ regiao: regiao.value
+})
+
                   });
             
                   if (response.ok) {
                     const data = await response.json();
                     console.log('Dados enviados com sucesso:', data);
-                   
                     console.error('Ocorreu um erro ao enviar os dados:', response.status);
                   }
                 } catch (error) {
