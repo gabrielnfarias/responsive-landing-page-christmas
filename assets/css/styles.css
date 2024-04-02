@@ -842,9 +842,11 @@ h1 {
   }
   .input-box input {
     width: 60%;
+    box-shadow: 0 2px 6px rgb(10 10 10 / 74%);
   }
   .continue-button button {
     width: 60%;
+    box-shadow: 0 2px 6px rgb(10 10 10 / 74%);
   }
   .show-scroll {
     display: none;
