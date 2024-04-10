@@ -193,7 +193,7 @@ img {
 }
 .img_logo {
   padding: auto;
-  width: 10%;
+  width: 20%;
 
   object-fit: cover;
 }
@@ -349,6 +349,10 @@ img {
 }
 .img_logo_mcmv {
   width: 200px;
+}
+.mcmv-img {
+  width: 280px;
+  display: flex;
 }
 /*========== DECORATION ==========*/
 .decoration__container {
